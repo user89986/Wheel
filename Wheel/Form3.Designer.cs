@@ -30,12 +30,12 @@
         {
             this.Password = new System.Windows.Forms.TextBox();
             this.User = new System.Windows.Forms.TextBox();
-            this.Registration = new System.Windows.Forms.PictureBox();
-            this.Delte = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Registration)).BeginInit();
+            this.Delte = new System.Windows.Forms.PictureBox();
+            this.Registration = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Delte)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration)).BeginInit();
             this.SuspendLayout();
             // 
             // Password
@@ -51,26 +51,6 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(300, 20);
             this.User.TabIndex = 1;
-            // 
-            // Registration
-            // 
-            this.Registration.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Registration.Location = new System.Drawing.Point(18, 168);
-            this.Registration.Name = "Registration";
-            this.Registration.Size = new System.Drawing.Size(136, 27);
-            this.Registration.TabIndex = 2;
-            this.Registration.TabStop = false;
-            this.Registration.Click += new System.EventHandler(this.Registration_Click);
-            // 
-            // Delte
-            // 
-            this.Delte.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Delte.Location = new System.Drawing.Point(180, 168);
-            this.Delte.Name = "Delte";
-            this.Delte.Size = new System.Drawing.Size(138, 27);
-            this.Delte.TabIndex = 3;
-            this.Delte.TabStop = false;
-            this.Delte.Click += new System.EventHandler(this.Delte_Click);
             // 
             // label1
             // 
@@ -92,10 +72,37 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Пороль*";
             // 
+            // Delte
+            // 
+            this.Delte.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Delte.BackgroundImage = global::Wheel.Properties.Resources.delete;
+            this.Delte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Delte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delte.Location = new System.Drawing.Point(172, 168);
+            this.Delte.Name = "Delte";
+            this.Delte.Size = new System.Drawing.Size(150, 27);
+            this.Delte.TabIndex = 3;
+            this.Delte.TabStop = false;
+            this.Delte.Click += new System.EventHandler(this.Delte_Click);
+            // 
+            // Registration
+            // 
+            this.Registration.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Registration.BackgroundImage = global::Wheel.Properties.Resources.edit;
+            this.Registration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Registration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Registration.Location = new System.Drawing.Point(18, 168);
+            this.Registration.Name = "Registration";
+            this.Registration.Size = new System.Drawing.Size(148, 27);
+            this.Registration.TabIndex = 2;
+            this.Registration.TabStop = false;
+            this.Registration.Click += new System.EventHandler(this.Registration_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(334, 211);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -106,8 +113,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form3";
             this.Text = "Form3";
-            ((System.ComponentModel.ISupportInitialize)(this.Registration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Delte)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

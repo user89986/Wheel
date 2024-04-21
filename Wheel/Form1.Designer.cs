@@ -41,7 +41,10 @@
             // ImputData
             // 
             this.ImputData.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ImputData.Location = new System.Drawing.Point(12, 127);
+            this.ImputData.BackgroundImage = global::Wheel.Properties.Resources.reg;
+            this.ImputData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ImputData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImputData.Location = new System.Drawing.Point(12, 86);
             this.ImputData.Name = "ImputData";
             this.ImputData.Size = new System.Drawing.Size(275, 30);
             this.ImputData.TabIndex = 0;
@@ -51,7 +54,10 @@
             // Editing
             // 
             this.Editing.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Editing.Location = new System.Drawing.Point(12, 163);
+            this.Editing.BackgroundImage = global::Wheel.Properties.Resources.edit;
+            this.Editing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Editing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Editing.Location = new System.Drawing.Point(12, 141);
             this.Editing.Name = "Editing";
             this.Editing.Size = new System.Drawing.Size(275, 30);
             this.Editing.TabIndex = 1;
@@ -61,7 +67,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 199);
+            this.pictureBox3.BackgroundImage = global::Wheel.Properties.Resources.delete;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 194);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(275, 30);
             this.pictureBox3.TabIndex = 2;
@@ -71,7 +80,10 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 235);
+            this.pictureBox4.BackgroundImage = global::Wheel.Properties.Resources.search;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 248);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(275, 30);
             this.pictureBox4.TabIndex = 3;
@@ -82,11 +94,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(299, 417);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Editing);
             this.Controls.Add(this.ImputData);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
