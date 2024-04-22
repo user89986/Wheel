@@ -29,7 +29,7 @@ namespace Wheel
                     connection.Open();
                     if (Name.Text == "" && Surname.Text == "" && Middlename.Text == "" && Number.Text == "" && Region.Text == "" && Breakage.Text == "" && Price.Text == "" && Status.Text == "" && Password.Text == ""&& Car.Text =="" && NumberPhone.Text =="")
                     {
-                        MessageBox.Show("Ошибка");
+                        MessageBox.Show("Введите данные");
                     }
                     else if (Password.Text == Password.Text)
                     {
@@ -72,7 +72,6 @@ namespace Wheel
             }
 
         }
-
 
     }
 }

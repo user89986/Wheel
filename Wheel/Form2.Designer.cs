@@ -37,7 +37,6 @@
             this.Price = new System.Windows.Forms.TextBox();
             this.Status = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +50,10 @@
             this.NumberPhone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Name
@@ -105,7 +107,7 @@
             // 
             // Status
             // 
-            this.Status.Location = new System.Drawing.Point(12, 484);
+            this.Status.Location = new System.Drawing.Point(12, 220);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(300, 20);
             this.Status.TabIndex = 7;
@@ -116,18 +118,6 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(300, 20);
             this.Password.TabIndex = 13;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(9, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 18);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Имя*";
             // 
             // label2
             // 
@@ -193,7 +183,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(9, 463);
+            this.label8.Location = new System.Drawing.Point(12, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(267, 18);
             this.label8.TabIndex = 21;
@@ -228,7 +218,7 @@
             // 
             // NumberPhone
             // 
-            this.NumberPhone.Location = new System.Drawing.Point(12, 220);
+            this.NumberPhone.Location = new System.Drawing.Point(12, 484);
             this.NumberPhone.Name = "NumberPhone";
             this.NumberPhone.Size = new System.Drawing.Size(300, 20);
             this.NumberPhone.TabIndex = 25;
@@ -237,7 +227,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(12, 199);
+            this.label11.Location = new System.Drawing.Point(9, 463);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(129, 18);
             this.label11.TabIndex = 26;
@@ -255,12 +245,35 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Wheel.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(439, 49);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.DimGray;
+            this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(9, 67);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 18);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Имя*";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(322, 600);
+            this.ClientSize = new System.Drawing.Size(322, 599);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.NumberPhone);
             this.Controls.Add(this.label10);
@@ -272,8 +285,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Status);
@@ -287,6 +300,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,7 +318,6 @@
         private System.Windows.Forms.TextBox Status;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox Password;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -317,5 +330,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox NumberPhone;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label15;
     }
 }
