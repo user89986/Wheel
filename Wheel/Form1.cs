@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
+using Randomsss;
 
 namespace Wheel
 {
     public partial class Form1 : Form
     {
+      
         public Form1()
         {
             InitializeComponent();
@@ -24,8 +27,10 @@ namespace Wheel
             using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
             {
                 connection.Open();
-                    
+                
+
             }
+            
         }
 
         private void ImputData_Click(object sender, EventArgs e)
