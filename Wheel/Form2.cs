@@ -33,17 +33,17 @@ namespace Wheel
                     }
                     else if (Password.Text == Password.Text)
                     {
-                        string sqlCheck = $"SELECT COUNT(*) FROM DataBase WHERE Password = ('{Password.Text}')";
+                        string sqlCheck = $"SELECT COUNT(*) FROM DataBase WHERE NumberPhone = ('{NumberPhone.Text}')";
                         using (var commandCheck = new SqliteCommand(sqlCheck, connection))
                         {
 
-                            commandCheck.Parameters.AddWithValue($"'{Password.Text}'", Password);
+                            commandCheck.Parameters.AddWithValue($"'{NumberPhone.Text}'", NumberPhone);
 
                             int count = Convert.ToInt32(commandCheck.ExecuteScalar());
 
                             if (count > 0)
                             {
-                                MessageBox.Show("Такой пароль уже существует. Пожалуйста, введите другой пароль.");
+                                MessageBox.Show("Данный номер зарегестрирован");
 
                                 // Очистить поле ввода пароля (необязательно)
                                 // txtPassword.Clear();
