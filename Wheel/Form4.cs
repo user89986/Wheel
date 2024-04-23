@@ -37,9 +37,9 @@ namespace Wheel
                         // Вывод результатов
                         while (reader.Read())
                         {
-                            resultsText.Append($"Данные: {reader["Name"]} ,{reader["Surname"]} ,{reader["Middlename"]} ,{reader["NumberPhone"]},{reader["Number"]},{reader["Region"]},{reader["Car"]},{reader["Breakage"]},{reader["Price"]},{reader["Status"]}\n");
+                            resultsText.Append($"Данные: {reader["Name"]}, {reader["Surname"]}, {reader["Middlename"]},{reader["NumberPhone"]},{reader["Number"]},{reader["Region"]},{reader["Car"]},{reader["Breakage"]},{reader["Price"]},{reader["Status"]}\n");
                         }
-                        MessageBox.Show(resultsText.ToString(), "Результаты поиска", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(resultsText.ToString(), "Результаты поиска");
 
                     }
                 }
@@ -64,7 +64,7 @@ namespace Wheel
                         {
                             resultsText.Append($"Данные: {reader["Name"]}, {reader["Surname"]}, {reader["Middlename"]},{reader["NumberPhone"]},{reader["Number"]},{reader["Region"]},{reader["Car"]},{reader["Breakage"]},{reader["Price"]},{reader["Status"]}\n");
                         }
-                        MessageBox.Show(resultsText.ToString(), "Результаты поиска", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(resultsText.ToString(), "Результаты поиска");
 
                     }
                 }

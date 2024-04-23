@@ -87,7 +87,7 @@ namespace Wheel
                     }
                     else
                     {
-                        MessageBox.Show("Не найдено");
+                        MessageBox.Show("Неверное имя пользователя или пароль.");
                     }
                 }
 
