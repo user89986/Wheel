@@ -14,6 +14,8 @@ namespace Wheel
 {
     public partial class Form3 : Form
     {
+        public object NumberPhone { get; private set; }
+
         public Form3()
         {
             InitializeComponent();
@@ -25,10 +27,10 @@ namespace Wheel
             using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
             {
                 connection.Open();
-                string sql = $"SELECT COUNT(*) FROM DataBase WHERE Name = ('{User.Text}') AND Password = ('{Password.Text}')";
+                string sql = $"SELECT COUNT(*) FROM DataBase WHERE NumberPhone = ('{User.Text}') AND Password = ('{Password.Text}')";
                 using (var command = new SqliteCommand(sql, connection))
                 {
-                    command.Parameters.AddWithValue($"('{User.Text}')", Name);
+                    command.Parameters.AddWithValue($"('{User.Text}')", NumberPhone);
                     command.Parameters.AddWithValue($"('{Password.Text}')", Password);
 
                     int count = Convert.ToInt32(command.ExecuteScalar());
@@ -39,10 +41,10 @@ namespace Wheel
                         Form2 form2 = new Form2();
                         form2.Show();
                         this.Hide();
-                        string sqlDelete = $"DELETE FROM DataBase WHERE Name = ('{User.Text}') AND Password = ('{Password.Text}')";
+                        string sqlDelete = $"DELETE FROM DataBase WHERE NumberPhone = ('{User.Text}') AND Password = ('{Password.Text}')";
                         using (var commandDelete = new SqliteCommand(sqlDelete, connection))
                         {
-                            commandDelete.Parameters.AddWithValue($"('{User.Text}')", Name);
+                            commandDelete.Parameters.AddWithValue($"('{User.Text}')", NumberPhone);
                             commandDelete.Parameters.AddWithValue($"('{Password.Text}')", Password);
                             int rowsAffected = commandDelete.ExecuteNonQuery();
                         }
@@ -64,20 +66,20 @@ namespace Wheel
             using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
             {
                 connection.Open();
-                string sqlCheck = $"SELECT COUNT(*) FROM DataBase WHERE Name = ('{User.Text}') AND Password = ('{Password.Text}')";
+                string sqlCheck = $"SELECT COUNT(*) FROM DataBase WHERE NumberPhone = ('{User.Text}') AND Password = ('{Password.Text}')";
                 using ( var commandCheck = new SqliteCommand( sqlCheck, connection))
                 {
-                    commandCheck.Parameters.AddWithValue($"('{User.Text}')", Name);
+                    commandCheck.Parameters.AddWithValue($"('{User.Text}')", NumberPhone);
                     commandCheck.Parameters.AddWithValue($"('{Password.Text}')", Password);
 
                     int count = Convert.ToInt32(commandCheck.ExecuteScalar());
 
                     if (count > 0)
                     {
-                        string sqlDelete = $"DELETE FROM DataBase WHERE Name = ('{User.Text}') AND Password = ('{Password.Text}')";
+                        string sqlDelete = $"DELETE FROM DataBase WHERE NumberPhone = ('{User.Text}') AND Password = ('{Password.Text}')";
                         using (var commandDelete =  new SqliteCommand( sqlDelete, connection))
                         {
-                            commandDelete.Parameters.AddWithValue($"('{User.Text}')", Name);
+                            commandDelete.Parameters.AddWithValue($"('{User.Text}')", NumberPhone);
                             commandDelete.Parameters.AddWithValue($"('{Password.Text}')", Password);
                             int rowsAffected = commandDelete.ExecuteNonQuery();
                         }
