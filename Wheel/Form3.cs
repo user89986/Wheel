@@ -87,7 +87,7 @@ namespace Wheel
                     }
                     else
                     {
-                        MessageBox.Show("Ошибка");
+                        MessageBox.Show("Не найдено");
                     }
                 }
 
