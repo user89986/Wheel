@@ -34,7 +34,8 @@
 # Заполнение базы данных
 База данных генерируеться с помощью Randomsss.dll. Он рандомно берет строчки из .txt файлов (где уже написаны имена, фамилии, и другие данные) и заполняет базу данных.
 
-[Random.txt](https://github.com/user89986/Wheel/files/15094070/Random.txt)
+[Random.txt](https://github.com/user89986/Wheel/files/15094108/Random.txt)
+
 # Подключение базы данных
 Для подключение используеться библиотека (Microsoft.Data.Sqlite)
-[Connection.txt](https://github.com/user89986/Wheel/files/15094075/Connection.txt)
+
