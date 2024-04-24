@@ -1,4 +1,4 @@
-[Connection.txt](https://github.com/user89986/Wheel/files/15094004/Connection.txt)[Random.txt](https://github.com/user89986/Wheel/files/15093969/Random.txt)![image](https://github.com/user89986/Wheel/assets/167529891/9b95eab0-57e7-4a3f-9e84-ad9777998fe1)![image](https://github.com/user89986/Wheel/assets/167529891/de1c8884-7307-44f9-80ca-6c77295ab658)# Wheel
+# Wheel
 Проект “Колесо” поможет организовать работу автомастерской, упростит процесс учета заказов и позволит эффективно управлять данными о клиентах и выполненных работах.
 # Проект содержит
 1. Базу данных для хранения информации о заказах и пользователях
