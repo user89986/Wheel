@@ -34,67 +34,7 @@
 # Заполнение базы данных
 База данных генерируеться с помощью Randomsss.dll. Он рандомно берет строчки из .txt файлов (где уже написаны имена, фамилии, и другие данные) и заполняет базу данных.
 
-
-[Uplnamespace Randomsss
-{
-    public class Random1
-    {
-        public void Connection()
-        {
-            string db = @"DataBase.db";
-            using (var connection = new SqliteConnection($"Data Source = {db}"))
-            {
-                connection.Open();
-
-                for (int i = 0; i < 200; i++)
-                {
-                    string Name, Surname, Middlename, NumberPhone, Car, Number, Region, Breakage, Price, Status, Password;
-
-                    // Чтение данных из текстовых файлов
-                    Name = ReadFromFile(@"Name.txt");
-                    Surname = ReadFromFile(@"Surname.txt");
-                    Middlename = ReadFromFile(@"Middlename.txt");
-                    NumberPhone = ReadFromFile(@"NumberPhone.txt");
-                    Car = ReadFromFile(@"Car.txt");
-                    Number = ReadFromFile(@"Number.txt");
-                    Region = ReadFromFile(@"Region.txt");
-                    Breakage = ReadFromFile(@"Breakage.txt");
-                    Price = ReadFromFile(@"Price.txt");
-                    Status = ReadFromFile(@"Status.txt");
-                    Password = ReadFromFile(@"Password.txt");
-
-                    // Запись данных в базу данных
-                    string query = $"INSERT INTO DataBase ('Name', 'Surname', 'Middlename', 'NumberPhone', 'Car', 'Number', 'Region', 'Breakage', 'Price', 'Status', 'Password') VALUES ('{Name}', '{Surname}', '{Middlename}', '{NumberPhone}', '{Car}', '{Number}', '{Region}', '{Breakage}', '{Price}', '{Status}', '{Password}')";
-                    using (SqliteCommand command = connection.CreateCommand())
-                    {
-                        command.CommandText = query;
-                        command.ExecuteNonQuery();
-                    }
-                }
-                connection.Close();
-            }
-        }
-        public static string ReadFromFile(string filePath)
-        {
-            string[] lines = File.ReadAllLines(filePath);
-            Random rnd = new Random();
-            int randomIndex = rnd.Next(0, lines.Length);
-            return lines[randomIndex];
-        }
-    }
-}oading Random.txt…]()
-
-
+[Random.txt](https://github.com/user89986/Wheel/files/15094070/Random.txt)
 # Подключение базы данных
 Для подключение используеться библиотека (Microsoft.Data.Sqlite)
-[Uplo public void Connect()
- {
-     string BDPath = @"DataBase.db";
-     using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
-     {
-         connection.Open();
-         
-
-     }
-     
- }ading Connection.txt…]()
+[Connection.txt](https://github.com/user89986/Wheel/files/15094075/Connection.txt)
