@@ -83,7 +83,8 @@
 
                     // Запись данных в базу данных
                     string query = $"INSERT INTO DataBase ('Name', 'Surname', 'Middlename', 'NumberPhone', 'Car', 'Number', 'Region',"+
-" 'Breakage', 'Price', 'Status', 'Password') VALUES ('{Name}', '{Surname}', '{Middlename}', '{NumberPhone}', '{Car}', '{Number}', '{Region}', '{Breakage}', '{Price}', '{Status}', '{Password}')";
+" 'Breakage', 'Price', 'Status', 'Password') VALUES ('{Name}', '{Surname}', "+
+"'{Middlename}', '{NumberPhone}', '{Car}', '{Number}', '{Region}', '{Breakage}', '{Price}', '{Status}', '{Password}')";
                     using (SqliteCommand command = connection.CreateCommand())
                     {
                         command.CommandText = query;
