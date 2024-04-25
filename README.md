@@ -8,24 +8,42 @@
 Простой функционал. Главное меню программы состоит из четырех основных кнопок, каждая из которых выполняет определенное действие для управления данными в программе.
 
 
-![Снимок экрана (14)](https://github.com/user89986/Wheel/assets/167529891/28c17cfa-02bd-47ec-a04d-fd8745c6ad32)
+![image](https://github.com/user89986/Wheel/assets/167529891/21b76439-796c-42a8-ba75-f4810b1711b2)
+
 # Регистрация 
 Нажав на данную кнопку, пользователь может зарегистрировать новый аккаунт и добавить новую запись в базу данных. Эта функция позволяет пользователям быть частью программы и сохранять свои данные для будущего использования.
 
 
-![Снимок экрана (15)](https://github.com/user89986/Wheel/assets/167529891/a3e44566-ece2-42c5-ace0-ba8475a6cc81)
-# Удаление и редактирование
+![image](https://github.com/user89986/Wheel/assets/167529891/e6db1935-e801-494c-aa93-89461665a117)
+
+
+
+# Редактирование данных 
 Удаление: При нажатии на кнопку "Удаление" пользователь вводит свои данные для входа и удаляет их из базы данных. Это позволяет осуществлять управление данными и обновлять информацию, исключая устаревшие или ненужные элементы.
 
 Редактирование: Кнопка "Редактирование" предоставляет пользователям возможность вносить изменения в существующие записи или объекты. Пользователь может изменять данные или обновлять информацию, делая ее актуальной и точной.
 
+Данные для входа:
+Пароль - @dm1n_0Progm.
+Номер телефона - 84903345349
 
-![Снимок экрана (16)](https://github.com/user89986/Wheel/assets/167529891/60d7bdfe-2364-42be-8817-63a355e905d6)
+
+![image](https://github.com/user89986/Wheel/assets/167529891/4e41efab-a2f1-41ee-bd30-b42afdeabb48)
+
+
+![image](https://github.com/user89986/Wheel/assets/167529891/1fa28b05-3b04-4ea2-878f-b9e8b45177d1)
+
+
+
+
+
+
 # Поиск 
 Нажав на кнопку "Поиск", пользователь может осуществить поиск по базе данных с целью поиска определенной информации или объекта. Эта функция упрощает процесс поиска требуемых данных и помогает пользователям быстро находить нужную информацию.
 
 
-![Снимок экрана (17)](https://github.com/user89986/Wheel/assets/167529891/b0705535-9823-4b8f-aa90-fe1c4f6d25af)
+![image](https://github.com/user89986/Wheel/assets/167529891/e4ba9018-21eb-4f17-82c6-461ce576f5eb)
+
 # Технические детали
 1. Язык программирования C#: Для разработки программы используется язык программирования C#.
 2. База данных SQ(Lite): Для хранения данных программа использует базу данных.
@@ -64,7 +82,8 @@
                     Password = ReadFromFile(@"Password.txt");
 
                     // Запись данных в базу данных
-                    string query = $"INSERT INTO DataBase ('Name', 'Surname', 'Middlename', 'NumberPhone', 'Car', 'Number', 'Region', 'Breakage', 'Price', 'Status', 'Password') VALUES ('{Name}', '{Surname}', '{Middlename}', '{NumberPhone}', '{Car}', '{Number}', '{Region}', '{Breakage}', '{Price}', '{Status}', '{Password}')";
+                    string query = $"INSERT INTO DataBase ('Name', 'Surname', 'Middlename', 'NumberPhone', 'Car', 'Number', 'Region',"+
+" 'Breakage', 'Price', 'Status', 'Password') VALUES ('{Name}', '{Surname}', '{Middlename}', '{NumberPhone}', '{Car}', '{Number}', '{Region}', '{Breakage}', '{Price}', '{Status}', '{Password}')";
                     using (SqliteCommand command = connection.CreateCommand())
                     {
                         command.CommandText = query;
@@ -94,9 +113,6 @@
      using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
      {
          connection.Open();
-         
-
      }
-     
  }
 ```
