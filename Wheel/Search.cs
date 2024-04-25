@@ -12,9 +12,9 @@ using System.Xml.Linq;
 
 namespace Wheel
 {
-    public partial class Form4 : Form
+    public partial class Search : Form
     {
-        public Form4()
+        public Search()
         {
             InitializeComponent();
         }
@@ -72,6 +72,7 @@ namespace Wheel
 
         }
 
+ 
     }
 }
 

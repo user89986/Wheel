@@ -13,10 +13,10 @@ using Randomsss;
 
 namespace Wheel
 {
-    public partial class Form1 : Form
+    public partial class Wheel : Form
     {
       
-        public Form1()
+        public Wheel()
         {
             InitializeComponent();
             Connect();
@@ -35,25 +35,25 @@ namespace Wheel
 
         private void ImputData_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Registration form2 = new Registration();
             form2.Show();
         }
 
         private void Editing_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Edit form3 = new Edit();
             form3.Show();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Edit form3 = new Edit();
             form3.Show();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            Search form4 = new Search();
             form4.Show();
         }
 

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Wheel
 {
-    public partial class Form2 : Form
+    public partial class Registration : Form
     {
-        public Form2()
+        public Registration()
         {
             InitializeComponent();
         }
@@ -27,9 +27,18 @@ namespace Wheel
                 using (var connection = new SqliteConnection($"Data Source = {BDPath}"))
                 {
                     connection.Open();
+
+                    if (Status.Checked)
+                    {
+                        Status.Text = "Готово";
+                    }
+                    else
+                    {
+                        Status.Text = "Не готово";
+                    }
                     if (Name.Text == "" && Surname.Text == "" && Middlename.Text == "" && Number.Text == "" && Region.Text == "" && Breakage.Text == "" && Price.Text == "" && Status.Text == "" && Password.Text == ""&& Car.Text =="" && NumberPhone.Text =="")
                     {
-                        MessageBox.Show("Введите данные");
+                        MessageBox.Show("Введите данные!");
                     }
                     else if (Password.Text == Password.Text)
                     {
@@ -43,7 +52,7 @@ namespace Wheel
 
                             if (count > 0)
                             {
-                                MessageBox.Show("Данный номер зарегестрирован");
+                                MessageBox.Show("Данный номер зарегестрирован!");
 
                                 // Очистить поле ввода пароля (необязательно)
                                 // txtPassword.Clear();
@@ -53,7 +62,7 @@ namespace Wheel
                                 string sql = $"INSERT INTO DataBase ('Name', 'Surname', 'Middlename', 'Number', 'Region', 'Breakage', 'Price', 'Status','Password', 'Car','NumberPhone') VALUES ('{Name.Text}','{Surname.Text}','{Middlename.Text}','{Number.Text}','{Region.Text}','{Breakage.Text}','{Price.Text}','{Status.Text}','{Password.Text}','{Car.Text}','{NumberPhone.Text}')";
                                 SqliteCommand command = new SqliteCommand(sql, connection);
                                 command.ExecuteNonQuery();
-                                MessageBox.Show("Данные введены");
+                                MessageBox.Show("Вы успешно зарегистрировались!");
 
                             }
 
@@ -73,5 +82,22 @@ namespace Wheel
 
         }
 
+        private void NumberPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char ch = e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+
+        }
+        private void Price_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Char ch = e.KeyChar;
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
