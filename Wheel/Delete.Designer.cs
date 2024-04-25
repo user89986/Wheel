@@ -35,7 +35,6 @@
             this.Middlename1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumberPhone)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,23 +100,12 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Отчество*";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(52, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 23);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Кого вы хотите удалить?";
-            // 
             // Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(319, 204);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Middlename1);
@@ -143,6 +131,5 @@
         private System.Windows.Forms.TextBox Middlename1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }
